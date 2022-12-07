@@ -2,9 +2,10 @@
 {
     public interface ICharacterService
     {
-        List<Character> GetAllCharacters();
-        Character GetCharacterById(int id);
+        Task<List<Character>> GetAllCharacters();
 
-        List<Character> AddCharacter(Character newCharacter);
+        Task<Character> GetCharacterById(int id);
+
+        Task<List<Character>> AddCharacter(Character newCharacter);
     }
 }
